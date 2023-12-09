@@ -62,7 +62,7 @@ public class Radio {
     }
 
     public int hashCode() {
-        int PRIME = true;
+        int prime = true;
         int result = 1;
         result = result * 59 + this.getCurrentRadioStation();
         result = result * 59 + this.getCurrentVolume();
