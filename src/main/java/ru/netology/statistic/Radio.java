@@ -1,24 +1,77 @@
 package ru.netology.statistic;
 
-public class Radio {
-    private int currentRadioStation;
-    private int currentVolume;
-    private int maxCurrentStation;
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
 
-    public Radio() {
-    }
+    public class Radio {
+        private int currentRadioStation;
+        private int currentVolume;
+        private int maxCurrentStation;
+
 
     public Radio(int currentRadioStation, int currentVolume, int maxCurrentStation) {
         this.currentRadioStation = currentRadioStation;
         this.currentVolume = currentVolume;
         this.maxCurrentStation = maxCurrentStation;
     }
+    public Radio() {
+        this.maxCurrentStation = 9;
+    }
+    public Radio(int numberOfRadioStation) {
+        this.maxCurrentStation = numberOfRadioStation - 1;
+    }
 
+    public void next() {
+        if (currentRadioStation != maxCurrentStation) {
+            currentRadioStation++;
+        } else {
+            currentRadioStation = 0;
+        }
+    }
+
+    public void prev() {
+        if (currentRadioStation != 0) {
+            currentRadioStation--;
+        } else {
+            currentRadioStation = maxCurrentStation;
+        }
+    }
+
+    public void increaseVolume() {
+        if (currentVolume != 100) {
+            currentVolume++;
+        } else {
+            currentVolume = 0;
+        }
+    }
+
+    public void reductionVolume() {
+        if (currentVolume != 0) {
+            currentVolume--;
+        } else {
+            currentVolume = 100;
+        }
+    }
+
+    public int getMinCurrentStation() {
+        return 0;
+    }
+
+    public int getMaxCurrentVolume() {
+        return 100;
+    }
+
+    public int getMinCurrentVolume() {
+        return 0;
+    }
     public int getCurrentRadioStation() {
+
         return this.currentRadioStation;
     }
 
     public int getCurrentVolume() {
+
         return this.currentVolume;
     }
 
@@ -31,6 +84,7 @@ public class Radio {
     }
 
     public void setCurrentVolume(int currentVolume) {
+
         this.currentVolume = currentVolume;
     }
 
