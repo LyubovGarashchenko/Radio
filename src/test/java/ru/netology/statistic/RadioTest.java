@@ -4,13 +4,76 @@ import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
 public class RadioTest {
+    @Test
+    public void shouldTestNoArgsArguments1() {
+        Radio radio = new Radio();
+        radio.setCurrentRadioStation(20);
+
+        int expected = 20;
+        int actual = radio.getCurrentRadioStation();
+        Assertions.assertEquals(expected, actual);
+    }
 
     @Test
-    public void shouldCreate1(){
+    public void shouldTestNoArgsArguments2(){
+        Radio radio = new Radio();
+        radio.setCurrentRadioStation(21);
+
+        int expected = 21;
+        int actual = radio.getCurrentRadioStation();
+        Assertions.assertEquals(expected, actual);
+    }
+    @Test
+    public void shouldTestNoArgsArguments3(){
+        Radio radio = new Radio();
+        radio.setCurrentRadioStation(19);
+
+        int expected = 19;
+        int actual = radio.getCurrentRadioStation();
+        Assertions.assertEquals(expected, actual);
+    }
+    @Test
+    public void shouldTestNoArgsArguments4(){
+        Radio radio = new Radio();
+        radio.setCurrentRadioStation(18);
+
+        int expected = 18;
+        int actual = radio.getCurrentRadioStation();
+        Assertions.assertEquals(expected, actual);
+    }
+    @Test
+    public void shouldTestNoArgsArguments5(){
+        Radio radio = new Radio();
+        radio.setCurrentRadioStation(13);
+
+        int expected = 13;
+        int actual = radio.getCurrentRadioStation();
+        Assertions.assertEquals(expected, actual);
+    }
+    @Test
+    public void shouldTestNoArgsArguments6(){
+        Radio radio = new Radio();
+        radio.setCurrentRadioStation(2);
+
+        int expected = 2;
+        int actual = radio.getCurrentRadioStation();
+        Assertions.assertEquals(expected, actual);
+    }
+    @Test
+    public void shouldTestNoArgsArguments7(){
         Radio radio = new Radio();
         radio.setCurrentRadioStation(1);
 
         int expected = 1;
+        int actual = radio.getCurrentRadioStation();
+        Assertions.assertEquals(expected, actual);
+    }
+    @Test
+    public void shouldTestNoArgsArguments8(){
+        Radio radio = new Radio();
+        radio.setCurrentRadioStation(0);
+
+        int expected = 0;
         int actual = radio.getCurrentRadioStation();
         Assertions.assertEquals(expected, actual);
     }
@@ -146,11 +209,11 @@ public class RadioTest {
     @Test
     public void shouldTestToNextStation4() {
         Radio radio = new Radio();
-        radio.setCurrentRadioStation(8);
+        radio.setCurrentRadioStation(9);
 
         radio.next();
 
-        int expected = 9;
+        int expected = 0;
         int actual = radio.getCurrentRadioStation();
         Assertions.assertEquals(expected, actual);
     }
@@ -162,7 +225,7 @@ public class RadioTest {
 
         radio.next();
 
-        int expected = 10;
+        int expected = 0;
         int actual = radio.getCurrentRadioStation();
         Assertions.assertEquals(expected, actual);
     }
@@ -206,7 +269,7 @@ public class RadioTest {
     @Test
     public void shouldTestToPreviousStation4() {
         Radio radio = new Radio();
-        radio.setCurrentRadioStation(10);
+        radio.setCurrentRadioStation(0);
 
         radio.prev();
 
@@ -456,11 +519,11 @@ public class RadioTest {
     @Test
     public void shouldTestReductionVolume1() {
         Radio radio = new Radio();
-        radio.setCurrentVolume(-1);
+        radio.setCurrentVolume(0);
 
         radio.reductionVolume();
 
-        int expected = -2;
+        int expected = 100;
         int actual = radio.getCurrentVolume();
         Assertions.assertEquals(expected, actual);
     }
@@ -546,6 +609,16 @@ public class RadioTest {
 
         int expected = 101;
         int actual = radio.getCurrentVolume();
+        Assertions.assertEquals(expected, actual);
+    }
+
+    @Test
+    public void shouldTestSetMaxCurrentStation() {
+        Radio radio = new Radio();
+        radio.setCurrentVolume(0);
+
+        int expected = 9;
+        int actual = radio.getMaxCurrentStation();
         Assertions.assertEquals(expected, actual);
     }
 }

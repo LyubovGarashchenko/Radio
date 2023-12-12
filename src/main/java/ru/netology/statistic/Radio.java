@@ -6,13 +6,14 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @AllArgsConstructor
 @Data
+
     public class Radio {
     private int currentRadioStation;
     private int currentVolume;
-    private int maxCurrentStation;
+    private int maxCurrentStation = 9;
 
 
-    public void next() {
+      public void next() {
         if (currentRadioStation != maxCurrentStation) {
             currentRadioStation++;
         } else {
