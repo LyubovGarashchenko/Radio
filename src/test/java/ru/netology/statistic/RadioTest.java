@@ -15,7 +15,7 @@ public class RadioTest {
     }
 
     @Test
-    public void shouldTestNoArgsArguments2(){
+    public void shouldTestNoArgsArguments2() {
         Radio radio = new Radio();
         radio.setCurrentRadioStation(21);
 
@@ -23,8 +23,9 @@ public class RadioTest {
         int actual = radio.getCurrentRadioStation();
         Assertions.assertEquals(expected, actual);
     }
+
     @Test
-    public void shouldTestNoArgsArguments3(){
+    public void shouldTestNoArgsArguments3() {
         Radio radio = new Radio();
         radio.setCurrentRadioStation(19);
 
@@ -32,8 +33,9 @@ public class RadioTest {
         int actual = radio.getCurrentRadioStation();
         Assertions.assertEquals(expected, actual);
     }
+
     @Test
-    public void shouldTestNoArgsArguments4(){
+    public void shouldTestNoArgsArguments4() {
         Radio radio = new Radio();
         radio.setCurrentRadioStation(18);
 
@@ -41,8 +43,9 @@ public class RadioTest {
         int actual = radio.getCurrentRadioStation();
         Assertions.assertEquals(expected, actual);
     }
+
     @Test
-    public void shouldTestNoArgsArguments5(){
+    public void shouldTestNoArgsArguments5() {
         Radio radio = new Radio();
         radio.setCurrentRadioStation(13);
 
@@ -50,8 +53,9 @@ public class RadioTest {
         int actual = radio.getCurrentRadioStation();
         Assertions.assertEquals(expected, actual);
     }
+
     @Test
-    public void shouldTestNoArgsArguments6(){
+    public void shouldTestNoArgsArguments6() {
         Radio radio = new Radio();
         radio.setCurrentRadioStation(2);
 
@@ -59,8 +63,9 @@ public class RadioTest {
         int actual = radio.getCurrentRadioStation();
         Assertions.assertEquals(expected, actual);
     }
+
     @Test
-    public void shouldTestNoArgsArguments7(){
+    public void shouldTestNoArgsArguments7() {
         Radio radio = new Radio();
         radio.setCurrentRadioStation(1);
 
@@ -68,8 +73,9 @@ public class RadioTest {
         int actual = radio.getCurrentRadioStation();
         Assertions.assertEquals(expected, actual);
     }
+
     @Test
-    public void shouldTestNoArgsArguments8(){
+    public void shouldTestNoArgsArguments8() {
         Radio radio = new Radio();
         radio.setCurrentRadioStation(0);
 
@@ -77,6 +83,7 @@ public class RadioTest {
         int actual = radio.getCurrentRadioStation();
         Assertions.assertEquals(expected, actual);
     }
+
     @Test
     public void shouldCreate2() {
         Radio radio = new Radio(9, 5, 9);
@@ -86,6 +93,7 @@ public class RadioTest {
         int actual = radio.getCurrentRadioStation();
         Assertions.assertEquals(expected, actual);
     }
+
     @Test
     public void shouldTestNewRadioStation() {
         Radio radio = new Radio(14, 88, 20);
@@ -99,7 +107,7 @@ public class RadioTest {
 
     @Test
     public void shouldTestWishNumberOfRadioStation1() {
-        Radio radio = new Radio(9,100, 11);
+        Radio radio = new Radio(9, 100, 11);
         radio.setCurrentRadioStation(10);
 
         int expected = 10;
@@ -109,7 +117,7 @@ public class RadioTest {
 
     @Test
     public void shouldTestWishNumberOfRadioStation2() {
-        Radio radio = new Radio(19,55, 44);
+        Radio radio = new Radio(19, 55, 44);
         radio.setCurrentRadioStation(11);
 
         int expected = 11;
@@ -119,7 +127,7 @@ public class RadioTest {
 
     @Test
     public void shouldTestWishNumberOfRadioStation3() {
-        Radio radio = new Radio(1,86,15);
+        Radio radio = new Radio(1, 86, 15);
         radio.setCurrentRadioStation(7);
 
         int expected = 7;
@@ -139,7 +147,7 @@ public class RadioTest {
 
     @Test
     public void shouldTestWishNumberOfRadioStation5() {
-        Radio radio = new Radio(17,32,18);
+        Radio radio = new Radio(17, 32, 18);
         radio.setCurrentRadioStation(1);
 
 
@@ -150,7 +158,7 @@ public class RadioTest {
 
     @Test
     public void shouldTestWishNumberOfRadioStation6() {
-        Radio radio = new Radio(1,30,10);
+        Radio radio = new Radio(1, 30, 10);
         radio.setCurrentRadioStation(0);
 
 
@@ -161,7 +169,7 @@ public class RadioTest {
 
     @Test
     public void shouldTestWishNumberOfRadioStation7() {
-        Radio radio = new Radio(1, 20,9);
+        Radio radio = new Radio(1, 20, 9);
         radio.setCurrentRadioStation(-1);
 
 
@@ -172,7 +180,7 @@ public class RadioTest {
 
     @Test
     public void shouldTestToNextStation1() {
-        Radio radio = new Radio(10, 34,11);
+        Radio radio = new Radio(10, 34, 11);
         radio.setCurrentRadioStation(10);
 
         radio.next();
