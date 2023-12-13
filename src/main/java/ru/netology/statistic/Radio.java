@@ -1,13 +1,14 @@
 package ru.netology.statistic;
 
-    public class Radio {
-        private int currentRadioStation;
-        private int currentVolume;
-        private int maxCurrentStation;
+public class Radio {
+    private int currentRadioStation;
+    private int currentVolume;
+    private int maxCurrentStation;
 
     public Radio() {
         this.maxCurrentStation = 9;
     }
+
     public Radio(int numberOfRadioStation) {
         this.maxCurrentStation = numberOfRadioStation - 1;
     }
